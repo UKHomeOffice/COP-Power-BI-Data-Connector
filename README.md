@@ -18,5 +18,7 @@ See the [Connector Certification](https://docs.microsoft.com/en-us/power-query/c
 for details on the certification process and requirements.
 ## Power BI Service Scheduled/On-Demand Refresh
 The Power BI Data Gateway is required in order to refresh reports that are published to the Power BI service that were built using the data gateway. Please see the [Technical Documentation](https://docs.microsoft.com/en-us/power-bi/service-gateway-custom-connectors) for more details.
+## Troubleshooting
+[Fiddler](https://www.telerik.com/fiddler) is recommended to help troubleshoot any issues. Fiddler captures HTTP traffic allowing you to view the OAuth token exchange and call to the REST API. Data connector troubleshooting is available in Visual Studio by executing the REST_API_Keycloak.query.pq file by starting the debug process. Microsoft have announced there will be further enhancements to the development and debugging experience of Data Connectors in Visual Studio. 
 ## Issues
 Issues can be reported through Microsoft's [Github issues page](https://github.com/Microsoft/DataConnectors/issues).
