@@ -1,11 +1,12 @@
 # Power BI Data Connector
-Data Connectors for Power BI enable developers to connect to custom data sources. This data connector enables Power BI Desktop users to connect and authenticate with Home Office APIs that are secured with OAuth 2.0 provided by Keycloak. The token endpoints have been removed from the code for security. The token endpoints need adding in lines 7-12 of the REST_API_Keycloak.pq file. The Git repo contains the source code. The source code is compiled in Visual Studio to produce the data connector .mez file. The Data Connector is written in the M language.
+Data Connectors for Power BI enable developers to build connectors that connect to custom data sources. This data connector enables Power BI Desktop users to connect and authenticate with Home Office APIs that are secured with OAuth 2.0 provided by Keycloak. The token endpoints have been removed from the code for security reasons. The token endpoints need adding in lines 7-12 of the REST_API_Keycloak.pq file. The Git repo contains the source code. The source code is compiled in Visual Studio to produce the data connector .mez file. The Data Connector is written in the M language.
 ## Develop, Compile and Install the Data Connector
 1. Install Visual Studio 2019 and install the Power Query SDK from the Visual Studio Marketplace
 2. Open the solution by opening the REST API Keycloak.sln file
-3. Build the project. This produces an extension file under the project bin\debug folder.
-4. Copy the REST API Keycloak.mek extension file into the `[Documents]\Power BI Desktop\Custom Connectors` directory on a computer running Power BI Desktop
-5. Open Power BI Desktop and the connector will appear in the 'Other' category
+3. Add the token endpoints in lines 7-12 of the REST_API_Keycloak.pq file
+4. Build the project. This produces an extension file under the project bin\debug folder.
+5. Copy the REST API Keycloak.mek extension file into the `[Documents]\Power BI Desktop\Custom Connectors` directory on a computer running Power BI Desktop
+6. Open Power BI Desktop and the connector will appear in the 'Other' category
 
 Note, to load extensions that have not been certified by Microsoft, you will need to lower the security level for extensions in Power BI Desktop to enable loading unsigned/uncertified connectors.
 
